@@ -146,6 +146,7 @@ namespace LYA1_Lexico
                     buffer += c;
                     archivo.Read();
                 }
+                
             }
             else if (c == '>' || c == '<')
             {

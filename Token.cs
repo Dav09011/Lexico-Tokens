@@ -9,11 +9,12 @@ namespace LYA1_Lexico
     {
         public enum Tipos
         {
-            Identificador,Numero,Caracter
+            Identificador,Numero,Caracter,Asignacion,FinSentencia,LlaveInicio,LLaveFin,
+            OperadorRelacional, OperadorLogico, OperadorTermino, OperadorFactor,
+            IncrementoTermino, IncrementoFactor
         }
         private string contenido;
         private Tipos  clasificacion;
-
         public Token()
         {
             contenido = "";
