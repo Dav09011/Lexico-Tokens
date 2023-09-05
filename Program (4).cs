@@ -13,11 +13,11 @@ namespace LYA1_Lexico
             {
                 using (Lexico L = new Lexico())
                 {
-                    L.setContenido("radio");
-                    L.setClasificacion(Token.Tipos.Identificador);
+                  while (!L.FinArchivo())
+                    {
+                        L.nextToken();
+                    }
 
-                    Console.WriteLine(L.getContenido());
-                    Console.WriteLine(L.getClasificacion());
                 }
             } 
             catch (Exception e)
