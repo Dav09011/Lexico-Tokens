@@ -31,5 +31,8 @@ radioDeLaCircunferencia = Identificador
 > = OperadorLogico
 >= = OperadorRelacional
 <= = OperadorRelacional
-} = LLaveFin
+"Hola mundo = Cadena
+"
+ = Cadena
+} = LlaveFin
 ￿ = Caracter

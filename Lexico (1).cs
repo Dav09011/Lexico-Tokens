@@ -51,6 +51,20 @@ namespace LYA1_Lexico
                     archivo.Read();
                 }
             }
+            else if (c == '"')
+            {
+                setClasificacion(Tipos.Cadena);
+                while (char.IsLetterOrDigit(c = (char)archivo.Peek()) || char.IsWhiteSpace(c = (char)archivo.Peek()))
+                {
+
+                   
+                    buffer += c;
+                    archivo.Read();
+                   
+                }
+
+
+            }
             else if (c == '=')
             {
                 setClasificacion(Tipos.Asignacion);
@@ -95,17 +109,17 @@ namespace LYA1_Lexico
                 }
 
             }
-            else if (c == ';')
-            {
-                setClasificacion(Tipos.FinSentencia);
-            }
             else if (c == '{')
             {
                 setClasificacion(Tipos.LlaveInicio);
             }
             else if (c == '}')
             {
-                setClasificacion(Tipos.LLaveFin);
+                setClasificacion(Tipos.LlaveFin);
+            }
+            else if (c == ';')
+            {
+                setClasificacion(Tipos.FinSentencia);
             }
             else if (c == '*' || c == '/' || c == '%')
             {
@@ -146,7 +160,7 @@ namespace LYA1_Lexico
                     buffer += c;
                     archivo.Read();
                 }
-                
+
             }
             else if (c == '>' || c == '<')
             {
