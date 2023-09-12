@@ -15,6 +15,7 @@ namespace LYA1_Lexico
             archivo = new StreamReader("prueba.cpp");
             log = new StreamWriter("prueba.log");
         }
+        
         public Lexico(string nombre)
         {
             archivo = new StreamReader(nombre);
